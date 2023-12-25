@@ -1,0 +1,20 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Clone</title>
+</head>
+<body>
+  <h1>YouTube Clone</h1>
+  <ul>
+    <% videos.forEach(video => { %>
+      <li>
+        <a href="/videos/<%= video._id %>"><%= video.title %></a>
+      </li>
+    <% }) %>
+  </ul>
+  <a href="/upload">Upload Video</a>
+</body>
+</html>
